@@ -16,7 +16,7 @@ export class HomePage {
 
   startScanning(){
     navigator.bluetooth.requestDevice({
-      filters: [{ services: [SERVICE_ID], name: 'LEDBLE-0101004F' }]
+      filters: [{ services: [SERVICE_ID] }]
     }).then(device => this.redirectToDevicePage(device));
   }
 
